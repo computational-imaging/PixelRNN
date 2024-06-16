@@ -1,0 +1,50 @@
+{
+    "name": "cam_noise",
+    "dataset": "Cambridge",
+    "task" : "temporal",
+    "path2weights": "/home/haleyso/PixelRNN/pretrained/cam_noise_finetuned.pt",
+    "save_dir": "/home/haleyso/PixelRNN/saved_models", 
+    "log_dir": "/home/haleyso/PixelRNN/saved_logs",
+    "timesteps": 16,
+    "batch_size": 1,
+    "max_pool": 1,
+    "seed": 321,
+    "model": {
+        "cnn_type": "CNN_noise",
+        "cnn_params": {
+            "dr_rate": 0.0,
+            "kernel_size": 5,
+            "dilation": 1,
+            "stride":1,
+            "groups":1,
+            "bias": false
+        },
+        "rnn_type": "rnn_1_mul_noise_fixed",
+        "rnn_params": {
+            "kernel_size": 5,
+            "dilation": 1,
+            "stride":1,
+            "groups":1,
+            "rnn_num_layers": 1,
+            "rnn_hidden_size": 1,
+            "bias": false,
+            "out_weight_init_scale": 1.0,
+            "hidden_weight_init_scale":1.0
+        }
+    },
+    "train_params":{
+        "num_epochs": 300,
+        "lr": 1e-4,
+        "lr_scheduler": "ReduceLROnPlateau",
+        "loss": "cross_entropy",
+        "optimizer": "Adam",
+        "num_classes": "all",
+        "cnn_method": "tanh_mx",
+        "cnn_output_quantization": "tanh_mx",
+        "rnn_method": "tanh_mx",
+        "hidden_quantization": "tanh_mx",
+        "gate_quantization": "tanh_mx",
+        "final_conv_method": "tanh_mx",
+        "linear_method": "full"
+    }    
+}
