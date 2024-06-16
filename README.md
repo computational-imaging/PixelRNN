@@ -113,9 +113,10 @@ If you have any questions,  feel free to send me an email (haleyso [at] stanford
 
 
 ## Citation
+If you found our work useful, please cite our work.
 
 ```
-@article{hso2024PixelRNN,
+@article{hmso2024pixelrnn,
     title={PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors},
     author={Haley M. So and Laurie Bose and Piotr Dudek and Gordon Wetzstein},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
