@@ -1,6 +1,7 @@
-## PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors
-_Haley So, Laurie Bose, Piotr Dudek, Gordon Wetzstein_<br>
-(CVPR 2024)
+## PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors (CVPR 2024)
+_[Haley So<sup>1</sup>](http://haleyso.github.io), [Laurie Bose<sup>2</sup>](https://scholar.google.co.uk/citations?user=HRkkhyIAAAAJ&hl=en), [Piotr Dudek<sup>2</sup>](https://research.manchester.ac.uk/en/persons/p.dudek), [Gordon Wetzstein<sup>1</sup>](https://stanford.edu/~gordonwz/)_<br>
+<sup>1</sup>Stanford University  <sup>2</sup>The University of Manchester
+
 
 [[Paper](https://openaccess.thecvf.com/content/CVPR2024/html/So_PixelRNN_In-pixel_Recurrent_Neural_Networks_for_End-to-end-optimized_Perception_with_Neural_CVPR_2024_paper.html)] [[Website](https://www.computationalimaging.org/publications/pixelrnn/)] [[Video](https://youtu.be/grlIwYMcmG0?si=wt59EqZCRwNoYA0E)]
 
@@ -111,5 +112,20 @@ If you have any questions,  feel free to send me an email (haleyso [at] stanford
 
 
 
+## Citation
+
+```
+@article{hso2024PixelRNN,
+    title={PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors},
+    author={Haley M. So and Laurie Bose and Piotr Dudek and Gordon Wetzstein},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {25233-25244}
+}
+```
+## Acknowledgments
+
+This project was in part supported by the National Science Foundation and Samsung.
 
 
