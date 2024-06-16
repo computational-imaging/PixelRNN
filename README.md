@@ -1,5 +1,5 @@
 ## PixelRNN: In-pixel Recurrent Neural Networks for End-to-end-optimized Perception with Neural Sensors (CVPR 2024)
-_[Haley So<sup>1</sup>](http://haleyso.github.io), [Laurie Bose<sup>2</sup>](https://scholar.google.co.uk/citations?user=HRkkhyIAAAAJ&hl=en), [Piotr Dudek<sup>2</sup>](https://research.manchester.ac.uk/en/persons/p.dudek), [Gordon Wetzstein<sup>1</sup>](https://stanford.edu/~gordonwz/)_<br>
+_[Haley So](http://haleyso.github.io)<sup>1</sup>, [Laurie Bose](https://scholar.google.co.uk/citations?user=HRkkhyIAAAAJ&hl=en)<sup>2</sup>, [Piotr Dudek](https://research.manchester.ac.uk/en/persons/p.dudek)<sup>2</sup>, [Gordon Wetzstein](https://stanford.edu/~gordonwz/)<sup>1</sup>_<br>
 <sup>1</sup>Stanford University  <sup>2</sup>The University of Manchester
 
 
