@@ -5,7 +5,7 @@
 Access the test set to upload into SCAMP5 at [gdrive link](https://drive.google.com/drive/folders/1QRdkHLVSc2mXBeM0uxlsRQLQKjTXXy9x?usp=sharing).  
 This is the test dataset for hand gesture. There are 10 examples of each of the 9 gestures. Each is 16 frames long. In the scamp5 code, replace the path in `pixelrnn.cpp` line 38 with your path. Line 36 is where the outputs will be saved. They will be saved in the same folder structure. For ease,  I included the empty folders here (`test_output_empty_folder`). Replace path in line 39 if needed.
 
-For the test videos, I saved out what the images _should_ look like in the folder called `test_simulated_intermediates`. The path is as so: `class/gesture_name/frame_i/image` where image is different outputs along the PixelRNN to compare intermediate outputs. Note that the input white for the conv is 5, and for the rnn, it is 2. This is due to the 255 limit of levels available before overflow. 
+For the test videos, I saved out what the images _should_ look like in the folder called `test_simulated_intermediates`. The path is as so: `class/gesture_name/frame_i/image` where image is different outputs along the PixelRNN to compare intermediate outputs. Note that the input white for the conv and rnn is 10. This is due to the 255 limit of levels available before overflow. 
 
 ## Run PixelRNN:
 ### Pipeline Overview
