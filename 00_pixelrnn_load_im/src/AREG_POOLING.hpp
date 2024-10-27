@@ -12,5 +12,5 @@ using namespace SCAMP5_PE;
 #define AREG_POOLING
 
 void MAX_POOL_F(int iterations,bool maxpool_dirx, bool maxpool_diry,bool blocking);  //DESTROYS CONTENT IN R0
-
+void MAX_POOL_F2(int iterations,bool maxpool_dirx, bool maxpool_diry,bool blocking, int threshold);  //DESTROYS CONTENT IN R0
 #endif

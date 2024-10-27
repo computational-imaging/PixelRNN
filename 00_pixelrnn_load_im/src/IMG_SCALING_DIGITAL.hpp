@@ -33,6 +33,7 @@ namespace IMGTF
 			///////////////////////////////////////////
 
 			void HALF_SCALE(dreg_t reg);
+			void QUARTER_SCALE(dreg_t reg);
 		}
 	}
 }

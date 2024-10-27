@@ -545,6 +545,130 @@ namespace IMGTF
 					ALL();
 				scamp5_kernel_end();
 			}
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			void QUARTER_SCALE(dreg_t reg) //USES R11 R0 R12
+			{
+				scamp5_dynamic_kernel_begin();
+					SET(R0);
+					MOV(R12,reg);
+				scamp5_dynamic_kernel_end();
+
+				scamp5_kernel_begin();
+					CLR(R1,R2,R3,R4);
+				scamp5_kernel_end();
+
+				uint8_t x = 128;
+				uint8_t y = 0;
+				uint8_t w = 127;
+				uint8_t h = 255;
+				scamp5_load_rect(R0,y,x,y+h,x+w);
+				for(int n = 0; n < 128 ; n++)
+				{
+					scamp5_kernel_begin();
+						SET(R2);
+						WHERE(R12);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						MOV(R12,R11);
+						CLR(R2);
+
+						SET(R4);
+						WHERE(R0);
+						DNEWS0(R0,FLAG);
+						CLR(R4);
+					scamp5_kernel_end();
+				}
+
+				x = 0;
+				y = 0;
+				w = 127;
+				h = 255;
+				scamp5_load_rect(R0,y,x,y+h,x+w);
+				for(int n = 0; n < 128 ; n++)
+				{
+					scamp5_kernel_begin();
+						SET(R4);
+						WHERE(R12);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						MOV(R12,R11);
+						CLR(R4);
+
+						SET(R2);
+						WHERE(R0);
+						DNEWS0(R0,FLAG);
+						CLR(R2);
+					scamp5_kernel_end();
+				}
+
+
+				x = 0;
+				y = 128;
+				w = 255;
+				h = 127;
+				scamp5_load_rect(R0,y,x,y+h,x+w);
+				for(int n = 0; n < 128 ; n++)
+				{
+					scamp5_kernel_begin();
+						SET(R1);
+						WHERE(R12);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						MOV(R12,R11);
+						CLR(R1);
+
+						SET(R3);
+						WHERE(R0);
+						DNEWS0(R0,FLAG);
+						CLR(R3);
+					scamp5_kernel_end();
+				}
+
+				x = 0;
+				y = 0;
+				w = 255;
+				h = 127;
+				scamp5_load_rect(R0,y,x,y+h,x+w);
+				for(int n = 0; n < 128 ; n++)
+				{
+					scamp5_kernel_begin();
+						SET(R3);
+						WHERE(R12);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						WHERE(R11);
+						DNEWS0(R11,FLAG);
+						MOV(R12,R11);
+						CLR(R3);
+
+						SET(R1);
+						WHERE(R0);
+						DNEWS0(R0,FLAG);
+						CLR(R1);
+					scamp5_kernel_end();
+				}
+
+				scamp5_dynamic_kernel_begin();
+					MOV(reg,R12);
+				scamp5_dynamic_kernel_end();
+
+				scamp5_kernel_begin();
+					ALL();
+				scamp5_kernel_end();
+
+			}
 		}
 	}
 }
